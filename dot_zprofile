@@ -10,4 +10,6 @@ export TERM="xterm-256color"
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-neofetch
+if [ -z "$TMUX" ]; then
+    neofetch
+fi
