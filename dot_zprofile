@@ -1,0 +1,13 @@
+
+wal -R
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+export TERM="xterm-256color"
+
+export PATH="$HOME/.cargo/bin:$PATH"
+
+neofetch

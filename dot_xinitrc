@@ -1,0 +1,7 @@
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
+exec bspwm
+xset +fp /usr/share/fonts/misc
+xset +fp ~/.fonts
+xset fp rehash
+
