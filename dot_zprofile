@@ -1,5 +1,4 @@
 
-wal -R
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
@@ -11,5 +10,6 @@ export TERM="xterm-256color"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 if [ -z "$TMUX" ]; then
-    neofetch
+	wal -R &> /dev/null
+	neofetch
 fi
