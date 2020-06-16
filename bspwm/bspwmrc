@@ -32,4 +32,3 @@ polybar example &
 picom --config $HOME/.config/picom/picom.conf &
 setxkbmap -layout "us,latam" -option "grp:win_space_toggle"
 xset r rate 300 70
-nohup python swallow.py &> /dev/null
