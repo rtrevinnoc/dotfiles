@@ -15,7 +15,7 @@ import subprocess
 from functools import partial
 
 
-EXCLUDED_CLASSES = ['qutebrowser', 'xev', 'lemonbar', 'xfce4-panel']
+EXCLUDED_CLASSES = ['firefox', 'xev', 'polybar']
 
 logging_level = logging.ERROR if len(sys.argv) == 1 else sys.argv[1]
 logging.basicConfig(filename=os.path.expanduser('~/.swallow.log'),
@@ -169,7 +169,10 @@ def swallow():
 
 if __name__ == '__main__':
     try:
-        swallow()
+        if cmd_output("ps -C 'python ./swallow.py' | awk 'FNR == 3'"):
+            exit()
+        else:
+            swallow()
     except Exception as e:
         logging.debug('Error occured in mainloop:'
                       f'\n{e}\n{traceback.format_exc()}')
