@@ -1,17 +1,17 @@
 # Sample ~/.muttrc for SUSE Linux
 
 #About Me
-set from = ""
-set realname = "Roberto Treviño"
+set from = "rtrevinnoc@wearebuildingthefuture.com"
+set realname = "Roberto Treviño Cervantes"
 
 # My credentials
-set smtp_url = "smtp://rtrevinnoc@hotmail.com@smtp.live.com:587/"
+set smtp_url = "smtps://rtrevinnoc@wearebuildingthefuture.com@smtp.dynu.com:465"
 set smtp_pass = ""
-set imap_user = ""
+set imap_user = "rtrevinnoc@wearebuildingthefuture.com"
 set imap_pass = ""
 
 # My mailboxes
-set folder = "imaps://imap-mail.outlook.com:993"
+set folder = "imaps://imap.dynu.com:993"
 set spoolfile = "+INBOX"
 
 # Where to put the stuff
@@ -26,9 +26,7 @@ set imap_keepalive = 900
 set sort = threads
 set editor = "nvim"
 set sort_aux = "reverse-last-date-received"
-set hostname = hotmail.com
-set postponed = "+[hotmail]/Drafts"
-set record = "+[hotmail]/Sent Mail"
+set hostname = wearebuildingthefuture.com
 set include
 set auto_tag = yes
 ignore "Authentication-Results:"
