@@ -124,23 +124,10 @@ super + ctrl + shift + space
 
 # Spawn firefox
 super + q
-	firefox
+	firefox-developer-edition
 
-#
-# mouse bindings
-#
-#super + button{1-3}
-#	bspc pointer -g {move,resize_side,resize_corner}
-    
-#super + @button{1-3}
-#	bspc pointer -u
-
-#super + !button{1-3}
-#	bspc pointer -t %i %i
-
-
-#~button1
-#	bspc pointer -g focus
+super + n
+	steam
 
 alt + button{1-3}
 	bspc pointer -g {move,resize_side,resize_corner}
