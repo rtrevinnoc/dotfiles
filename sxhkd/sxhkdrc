@@ -153,10 +153,10 @@ XF86AudioMute
 
 # brightness keys
 XF86MonBrightnessUp
-	increase_backlight
+	brightnessctl s 10%+
 
 XF86MonBrightnessDown	
-	decrease_backlight
+	brightnessctl s 10%-
 
 Print
 	scrot -e 'mv $f ~/Pictures/Screenshots/ 2>/dev/null'
