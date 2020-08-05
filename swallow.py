@@ -15,7 +15,7 @@ import subprocess
 from functools import partial
 
 
-EXCLUDED_CLASSES = ['firefox', 'xev', 'polybar']
+EXCLUDED_CLASSES = ['firefoxdeveloperedition', 'xev', 'polybar', 'qutebrowser', 'Steam', 'microsoft teams - preview', 'google-chrome']
 
 logging_level = logging.ERROR if len(sys.argv) == 1 else sys.argv[1]
 logging.basicConfig(filename=os.path.expanduser('~/.swallow.log'),
