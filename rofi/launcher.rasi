@@ -44,7 +44,7 @@ prompt {
 
 entry {
     background-color:               @bg2;
-    text-color:                     @bg;
+    text-color:                     @fga;
     placeholder-color:              @fga;
     expand:                         true;
     horizontal-align:               0;
@@ -108,8 +108,8 @@ element-text {
 }
 
 element selected {
-    background-color:               @bg1;
-    text-color:                     @bg;
+    background-color:               @bg;
+    text-color:                     @bg3;
 	border:							0px;
     border-radius:                  0px;
     border-color:                  	@bg;

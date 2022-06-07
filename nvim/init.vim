@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'https://gitlab.com/yorickpeterse/vim-paper.git'
 Plug 'davidhalter/jedi-vim'
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -12,7 +13,7 @@ inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1
-" let g:airline_theme='<theme>' " <theme> is a valid theme name
+let g:airline_theme='minimalist' " <theme> is a valid theme name
 
 Plug 'jiangmiao/auto-pairs'
 
@@ -27,6 +28,7 @@ let g:neoformat_basic_format_retab = 1
 let g:neoformat_basic_format_trim = 1
 
 Plug 'davidhalter/jedi-vim'
+Plug 'Shougo/neco-syntax'
 " disable autocompletion, cause we use deoplete for completion
 let g:jedi#completions_enabled = 0
 " open the go-to function in split, not another buffer
@@ -50,14 +52,28 @@ Plug 'relastle/bluewery.vim'
 Plug 'eemed/sitruuna.vim'
 Plug 'whatyouhide/vim-gotham'
 
+Plug 'SirVer/ultisnips'
+
+Plug 'honza/vim-snippets'
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+
+Plug 'tomlion/vim-solidity'
+Plug 'w0ng/vim-hybrid'
+Plug 'mcchrish/zenbones.nvim'
+
 call plug#end()
 
-colorscheme gotham256
-" let g:airline_theme='bluewery' " <theme> is a valid theme name
-"colorscheme gruvbox
-"set background=dark
 call neomake#configure#automake('nrwi', 500)
+set termguicolors
+color paper
 :set number relativenumber
 :set nowrap
+:set ignorecase
+:set smartcase
+:set mouse=a
 set clipboard+=unnamedplus
 nnoremap S :%s///g<Left><Left><Left>
